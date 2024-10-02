@@ -2,8 +2,7 @@
 toc: false
 comments: false
 hide: true
-layout: post
-type: help
+layout: post 
 title: Tool References
 ---
 
