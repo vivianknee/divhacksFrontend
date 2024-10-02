@@ -1,9 +1,9 @@
-title: Political Corruption Literacy Project
+title: DivHacktivism
 description: "Div Hacks 2024"
 owner_name: Vivian Ni
 github_username: vivianknee
 github_repo: "vivianknee"
-baseurl: "/Political-Corruption-Literacy-Project"
+baseurl: "/divhacktivism"
 remote_theme: jekyll/minima
 minima:
   social_links:

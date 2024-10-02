@@ -2,7 +2,7 @@
 layout: none
 search_exclude: true
 ---
-home page for div hacks project
-
-
+DivHacktivism
+<h1>test</h1>
+<h3>test2</h3>
 # Posts
