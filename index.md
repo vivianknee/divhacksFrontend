@@ -1,9 +1,8 @@
 ---
-layout: home
+layout: none
 search_exclude: true
 ---
-A modified blog for CSA Based on Fastpages- Tirth Thakkar & Haseeb Beg   
-
+home page for div hacks project
 
 
 # Posts
