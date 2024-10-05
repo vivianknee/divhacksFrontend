@@ -76,7 +76,7 @@ layout: none
         align-items: center;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        row-gap: 30px
+        row-gap: 30px;
     }
 
     #search {
