@@ -18,8 +18,32 @@ layout: none
             <input id="searchbar" class="searchbar" type="text" placeholder="Type here">
         </div>
     </div>
+    <div id="filters">
+        <button class="filter" onclick="filterObjects('all')">Show All</button>
+        <button class="filter" onclick="filterObjects('race')">Race</button>
+        <button class="filter" onclick="filterObjects('climate')">Climate</button>
+        <button class="filter" onclick="filterObjects('gender')">Gender</button>
+        <button class="filter" onclick="filterObjects('humanRights')">Human Rights</button>
+    </div>
+    <div id="filters">
+        <button class="filter" onclick="filterObjects('all')">Show All</button>
+        <button class="filter" onclick="filterObjects('race')">Race</button>
+        <button class="filter" onclick="filterObjects('climate')">Climate</button>
+        <button class="filter" onclick="filterObjects('gender')">Gender</button>
+        <button class="filter" onclick="filterObjects('humanRights')">Human Rights</button>
+    </div>
     <br><br>
     <div class="container">
+    <img src="/images/searchicon.png">
+    <div class="container, objects">
+        <div class="square, race">BLM</div>
+        <div class="square, gender">lgbgqt</div>
+        <div class="square, climate">politechnika</div>
+        <div class="square">one</div>
+        <div class="square">another one</div>
+        <div class="square">and another one</div>
+        <div class="square">one more</div>
+        <div class="square">two more</div>
     </div>
 </body>
 </html>
