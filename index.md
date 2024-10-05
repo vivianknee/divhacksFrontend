@@ -1,9 +1,7 @@
 ---
 layout: none
-search_exclude: true
 ---
-DivHacktivism
-# Posts
+{%- include navbar.html -%}
 
 <html lang="en">
 <head>
