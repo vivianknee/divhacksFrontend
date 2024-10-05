@@ -1,9 +1,6 @@
 ---
 layout: none
 ---
-<<<<<<< HEAD
-{%- include navbar.html -%}
-=======
 {%- include navbar.html -%}
 
 <style>
@@ -44,7 +41,7 @@ layout: none
 
     .heading_1{
         font-weight: 700;
-        
+        font-size: 70;
     }
 
     .heading_2{
@@ -53,7 +50,7 @@ layout: none
     }
 
     .content_container p{
-        font-size: 1rem;
+        font-size: 1.5rem;
         color: var(--text-color);
         margin-bottom: 2rem;
     }
@@ -121,4 +118,3 @@ layout: none
         </section>
     </body>
 </html>
->>>>>>> 6393b1b3d086a1fc83274e1f2d5e20d78f9a97e9
