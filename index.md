@@ -83,9 +83,11 @@ layout: none
     }
 
     .image_container img {
-        width: 100%;
+        width: 170%;
         max-width: 1000px;
         margin: auto;
+        margin-top: 75px;
+        margin-left: 50px;
         border-radius: 10px;
     }
 
