@@ -15,12 +15,19 @@ layout: none
     <div id="search">
         <input id="searchbar" class="searchbar" type="text" placeholder="type here">
     </div>
+    <div id="filters">
+        <button class="filter" onclick="filterObjects('all')">Show All</button>
+        <button class="filter" onclick="filterObjects('race')">Race</button>
+        <button class="filter" onclick="filterObjects('climate')">Climate</button>
+        <button class="filter" onclick="filterObjects('gender')">Gender</button>
+        <button class="filter" onclick="filterObjects('humanRights')">Human Rights</button>
+    </div>
     <br><br>
     <img src="/images/searchicon.png">
-    <div class="container">
-        <div class="square">BLM</div>
-        <div class="square">lgbgqt</div>
-        <div class="square">politechnika</div>
+    <div class="container, objects">
+        <div class="square, race">BLM</div>
+        <div class="square, gender">lgbgqt</div>
+        <div class="square, climate">politechnika</div>
         <div class="square">one</div>
         <div class="square">another one</div>
         <div class="square">and another one</div>
@@ -66,6 +73,23 @@ layout: none
     .searchbar::placeholder {
         text-align:center;
     }
+
+    .filter {
+        border: none;
+        outline: none;
+        margin-bottom: 20px;
+        padding: 12px 16px;
+        background-color: #5c48ee;
+        cursor: pointer;
+    }
+
+    .filter:hover {
+        background-color: white;
+    }
+
+    .show {
+        display: block;
+    }
 </style>
 
 <script>
@@ -84,5 +108,43 @@ layout: none
                 square.style.display = "none";
             }
         }
+    }
+
+    filterObjects("all");
+
+    function filterObjects(c) {
+        var x, i;
+        x = document.getElementByClassName("square");
+        if (c ==all) c = "",
+            for (i = 0; i < x.length; i++)
+                removeClass(x[i], "show");
+                if ((x[i].className.indexOf(c) > -1) addClass(x[i], "show") );
+    }
+
+    function addClass(element, name){
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr.indexOf(arr[i] == -1)) {
+                element.className += " " + arr2[i];
+            }
+        }
+
+    }
+
+    function removeClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr.indexOf(arr[i] == -1)) {
+                while (arr.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i], 1))
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
     }
 </script>
