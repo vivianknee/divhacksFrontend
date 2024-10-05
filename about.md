@@ -4,6 +4,7 @@ layout: none
 {%- include navbar.html -%}
 
 <html>
+<br>
 <h2>About DivHacktivism</h2>
 <p>Welcome to DivHacktivism, a vibrant hub dedicated to empowering activists and organizations in the digital age. Our mission is to connect individuals with a diverse array of activist groups focused on a multitude of causes, from social justice and environmental sustainability to human rights and community engagement. </p>
 <br>
@@ -25,10 +26,10 @@ layout: none
 <style>
 
 body {
-    background-color: #CBC5EA;
+    background-color: white;
 }
 h2 {
-    color: white;
+    color: #5c48ee;
     text-align: center;
     font-size: 40px;
 }
