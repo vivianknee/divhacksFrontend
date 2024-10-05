@@ -5,104 +5,7 @@ baseurl: /facinghistory
 
 {%- include navbar.html -%}
 
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&display=swap');<style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&display=swap');
-
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded CSS Webpage</title>
-    <style>
-        body {
-            font-family: Poppins, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: ##ffffff;
-        }
-        header {
-            background-color: #5c48ee;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 1.5em;
-        }
-        h2{
-            font-size:1.75em;
-        }
-        section {
-            margin: 15px;
-            padding: 20px;
-            background: #CBC5EA;
-            border: 1px solid #ddd;
-            color: #333333;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #007bff;
-            color: white;
-        }
-        .highlighted-section {
-            background-color: #f4f4f4; /* Matching the body background */
-            color: #333; /* Darker text */
-            font-size: 1em; /* Bigger font size */
-            border: none; /* Removing the border */
-            margin: 15px auto;
-            width: 80%;
-            text-align: center;
-        }
-        .events-section {
-            background: white;
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin: 10px;
-            flex: 0 0 30%; /* Flex-grow, Flex-shrink, Flex-basis - Do not grow, do not shrink, initial basis is 30% */
-            box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-            width: 33%;
-        }
-        .event {
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-        }
-        .event:last-child {
-            border-bottom: none;
-        }
-        .event h2 {
-            color: #0056b3;
-        }
-        .event time {
-            font-style: italic;
-            color: #666;
-        }
-        .event address {
-            font-style: normal;
-            color: #333;
-        }
-        .flex-container {
-            display: flex; /* Enables flexbox */
-            justify-content: space-between; /* Spreads the children with space between them */
-            padding: 20px;
-        }
-        .flex-item {
-            width: 30%; /* Adjusts each item to take up approximately one-third of the container */
-            padding: 10px;
-            background-color: #f4f4f4;
-            border: 1px solid #ccc;
-            text-align: center;
-            color: #333;
-        }
-        header a:link, header a:visited, header a:hover, header a:active {
-            color: white; /* Keeps the text white */
-            text-decoration: none; /* No underline */
-        }
-    </style>
-</head>
+<html>
 <body>
     <header>
         <h1><a href="https://www.facinghistory.org/">FACING HISOTRY AND OURSELVES</a></h1>
@@ -162,3 +65,93 @@ baseurl: /facinghistory
     </section>
 </body>
 </html>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&display=swap');<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&display=swap');
+    
+    body {
+        font-family: Poppins, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: ##ffffff;
+    }
+    header {
+        background-color: #5c48ee;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1.5em;
+    }
+    h2{
+        font-size:1.75em;
+    }
+    section {
+        margin: 15px;
+        padding: 20px;
+        background: #CBC5EA;
+        border: 1px solid #ddd;
+        color: #333333;
+    }
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #007bff;
+        color: white;
+    }
+    .highlighted-section {
+        background-color: #f4f4f4; /* Matching the body background */
+        color: #333; /* Darker text */
+        font-size: 1em; /* Bigger font size */
+        border: none; /* Removing the border */
+        margin: 15px auto;
+        width: 80%;
+        text-align: center;
+    }
+    .events-section {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 10px;
+        flex: 0 0 30%; /* Flex-grow, Flex-shrink, Flex-basis - Do not grow, do not shrink, initial basis is 30% */
+        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+        width: 33%;
+    }
+    .event {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .event:last-child {
+        border-bottom: none;
+    }
+    .event h2 {
+        color: #0056b3;
+    }
+    .event time {
+        font-style: italic;
+        color: #666;
+    }
+    .event address {
+        font-style: normal;
+        color: #333;
+    }
+    .flex-container {
+        display: flex; /* Enables flexbox */
+        justify-content: space-between; /* Spreads the children with space between them */
+        padding: 20px;
+    }
+    .flex-item {
+        width: 30%; /* Adjusts each item to take up approximately one-third of the container */
+        padding: 10px;
+        background-color: #f4f4f4;
+        border: 1px solid #ccc;
+        text-align: center;
+        color: #333;
+    }
+    header a:link, header a:visited, header a:hover, header a:active {
+        color: white; /* Keeps the text white */
+        text-decoration: none; /* No underline */
+    }
+</style>
