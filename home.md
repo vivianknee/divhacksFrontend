@@ -12,19 +12,24 @@ layout: none
 </head>
 <br><br>
 <body>
+    <p class="instructions" >Use the search or filter tools to find the groups you're interested in!</p>
+    <br>
     <div class="search-wrapper">
         <div id="search">
-            <!-- <img src="images/searchicon.png" style="width: 30px"> -->
-            <input id="searchbar" class="searchbar" type="text" placeholder="Type here" >
+            <input class="searchbar" id="searchbar" type="text" placeholder="Type here" >
         </div>
     </div>
     <br>
     <div class="filters" id="filters">
         <button class="searchbutton" id="search_button">Search</button>
-        <input type="checkbox" id="community" name="community" value="Community">
-        <label for="community">Community</label><br>
-        <input type="checkbox" id="antiHate" name="antiHate" value="Anti-Hate">
-        <label for="antiHate">Anti-Hate</label><br>
+        <div class="filter-item">
+            <input class="box_pos" type="checkbox" id="community" name="community" value="Community">
+            <label for="community">Community</label>
+        </div>
+        <div class="filter-item">
+            <input class="box_pos" type="checkbox" id="antiHate" name="antiHate" value="Anti-Hate">
+            <label for="antiHate">Anti-Hate</label>
+        </div>
     </div>
     <br><br>
     <div id="result" class="container objects">
@@ -33,14 +38,14 @@ layout: none
 </html>
 
 <style>
+    .instructions {
+        display: flex;
+        font-size: 16px;
+        justify-content: center;
+    }
+    
     .search-wrapper {
         position: relative;
-    }
-
-    .search-wrapper img {
-        position: absolute;
-        top: 5px;
-        left: 40.8%;
     }
 
     .search-wrapper input {
@@ -49,6 +54,23 @@ layout: none
 
     .searchbar {
         width: 300px;
+        padding: 12px 15px;
+        border: 2px solid #ddd;
+        border-radius: 30px;
+        font-size: 16px;
+        outline: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+
+    .searchbar::placeholder {
+        color: #aaa;
+        font-style: italic;
+    }
+
+    .searchbar:focus {
+        border-color: #5c48ee;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
     }
 
     .square {
@@ -76,18 +98,70 @@ layout: none
         display:flex;
         justify-content: center;
     }
-    .searchbar {
-        background-color: white;
-        border-color: #5c48ee;
-        border-radius: 20px;
-        padding: 10px;
-        width: 300px;
+
+    .searchbutton {
+        padding: 10px 15px;
+        margin-bottom: 15px;
+        background-color: #5c48ee;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .searchbutton:hover {
+        background-color: #CBC5EA;
     }
 
     .filters {
-        display:flex;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .filter-item {
+        display: flex;
         align-items: center;
-        justify-content: space-evenly;
+    }
+
+    .box_pos {
+        margin-top: -6px;
+    }
+
+    .filters input[type="checkbox"] {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #5c48ee;
+        border-radius: 4px;
+        margin-right: 10px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .filters input[type="checkbox"]:checked::before {
+        content: '✔';
+        color: white;
+        font-size: 16px;
+        position: relative;
+        left: 3px;
+        top: -1px;
+    }
+
+    .filters input[type="checkbox"]:checked {
+        background-color: #5c48ee;
+        border-color: #5c48ee;
+    }
+
+    .filters label {
+        font-size: 16px;
+        color: #555;
+        cursor: pointer;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
     }
 
 </style>
