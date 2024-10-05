@@ -33,12 +33,10 @@ layout: none
         <button class="filter" onclick="filterObjects('humanRights')">Human Rights</button>
     </div>
     <br><br>
-    <div class="container">
-    <img src="/images/searchicon.png">
-    <div class="container, objects">
-        <div class="square, race">BLM</div>
-        <div class="square, gender">lgbgqt</div>
-        <div class="square, climate">politechnika</div>
+    <div class="container objects">
+        <div class="square race">BLM</div>
+        <div class="square gender">lgbgqt</div>
+        <div class="square climate">politechnika</div>
         <div class="square">one</div>
         <div class="square">another one</div>
         <div class="square">and another one</div>
