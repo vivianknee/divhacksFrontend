@@ -113,7 +113,7 @@ layout: none
                 <button><a class="explore-btn" href="{{ site.baseurl }}/home">Explore</a></button>
             </div>
             <div class="image_container">
-                <img src="images/image1.png" alt="image1" width="100">
+                <img src="images/logo.png" alt="image1" width="100">
             </div>
         </section>
     </body>
