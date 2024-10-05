@@ -12,25 +12,30 @@ layout: none
 </head>
 <br><br>
 <body>
-    <div id="search">
-        <input id="searchbar" class="searchbar" type="text" placeholder="type here">
+    <div class="search-wrapper">
+        <div id="search">
+            <img src="images/searchicon.png" style="width: 30px">
+            <input id="searchbar" class="searchbar" type="text" placeholder="Type here">
+        </div>
     </div>
     <br><br>
-    <img src="/images/searchicon.png">
     <div class="container">
-        <div class="square">BLM</div>
-        <div class="square">lgbgqt</div>
-        <div class="square">politechnika</div>
-        <div class="square">one</div>
-        <div class="square">another one</div>
-        <div class="square">and another one</div>
-        <div class="square">one more</div>
-        <div class="square">two more</div>
     </div>
 </body>
 </html>
 
 <style>
+    .search-wrapper {
+        position: relative;
+    }
+    .search-wrapper img {
+        position: absolute;
+        top: 5px;
+        left: 40.8%;
+    }
+    .search-wrapper input {
+        padding-left: 50px;
+    }
     .square {
         width: 350px;
         height: 350px;
@@ -63,9 +68,6 @@ layout: none
         padding: 10px;
         width: 300px;
     }
-    .searchbar::placeholder {
-        text-align:center;
-    }
 </style>
 
 <script>
@@ -85,4 +87,32 @@ layout: none
             }
         }
     }
+
+    function parseCSV(csvString) {
+        const rows = csvString.trim().split('\n');
+        return rows.map(row => row.split(','));
+    }
+
+    // Fetch the CSV file
+    fetch('interdependence-orgs.csv')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            const dataArray = parseCSV(data);
+            console.log(dataArray);
+            for(let i = 1; i < dataArray.length; i++) {
+                let container = document.querySelector(".container");
+                let child = document.createElement("div");
+                child.classList.add("square");
+                child.textContent = dataArray[i][0];
+                container.appendChild(child);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching the file:', error);
+        });
 </script>
