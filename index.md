@@ -75,7 +75,7 @@ layout: none
     }
 
     .image_container {
-        position: relative;
+        position: center;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -91,6 +91,7 @@ layout: none
 
     .image_container img:nth-child(1){
         transform: translateY(-70px);
+        
     }
 
     .explore-btn {
@@ -113,7 +114,7 @@ layout: none
                 <button><a class="explore-btn" href="{{ site.baseurl }}/home">Explore</a></button>
             </div>
             <div class="image_container">
-                <img src="images/image1.png" alt="image1" width="100">
+                <img src="images/logo.png" alt="image1" width="100">
             </div>
         </section>
     </body>
