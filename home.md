@@ -193,22 +193,21 @@ layout: none
     }
 
     // Fetch the CSV file
-    fetch('interdependence-orgs.csv')
+    fetch("http://localhost:8080/api/divhacks/get")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return response.text();
+            return response.json();
         })
-        .then(data => {
-            dataArray = parseCSV(data);
+        .then(dataArray => {
             console.log(dataArray);
-            console.log("data set to all_groups");
             for(let i = 1; i < dataArray.length; i++) {
+                let label = dataArray[i]["label"];
                 let container = document.querySelector(".container");
                 let child = document.createElement("div");
                 child.classList.add("square");
-                child.textContent = dataArray[i][0];
+                child.textContent = label;
                 container.appendChild(child);
             }
         })
