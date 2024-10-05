@@ -11,7 +11,9 @@ layout: none
     <title>Document</title>
 </head>
 <body>
-    <input id="searchbar" class="searchbar" type="text" placeholder="type here">
+    <div>
+        <input id="searchbar" class="searchbar" type="text" placeholder="type here">
+    </div>
     <br><br>
     <div class="container">
         <div class="square" style="background-color: red;">BLM</div>
@@ -23,10 +25,13 @@ layout: none
 
 <style>
     .square {
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    padding:5px;
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        padding:5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .container {
