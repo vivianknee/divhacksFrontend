@@ -75,7 +75,7 @@ layout: none
     }
 
     .image_container {
-        position: relative;
+        position: center;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -91,6 +91,7 @@ layout: none
 
     .image_container img:nth-child(1){
         transform: translateY(-70px);
+        
     }
 
     .explore-btn {
