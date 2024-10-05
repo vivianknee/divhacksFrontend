@@ -10,34 +10,61 @@ layout: none
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<br><br>
 <body>
-    <div>
+    <div id="search">
         <input id="searchbar" class="searchbar" type="text" placeholder="type here">
     </div>
     <br><br>
+    <img src="/images/searchicon.png">
     <div class="container">
-        <div class="square" style="background-color: red;">BLM</div>
-        <div class="square" style="background-color: lightblue;">lgbgqt</div>
-        <div class="square" style="background-color: yellow;">politechnika</div>
+        <div class="square">BLM</div>
+        <div class="square">lgbgqt</div>
+        <div class="square">politechnika</div>
+        <div class="square">one</div>
+        <div class="square">another one</div>
+        <div class="square">and another one</div>
+        <div class="square">one more</div>
+        <div class="square">two more</div>
     </div>
 </body>
 </html>
 
 <style>
     .square {
-        width: 150px;
-        height: 150px;
+        width: 350px;
+        height: 350px;
         border-radius: 10px;
         padding:5px;
         display: flex;
         justify-content: center;
         align-items: center;
+        border-color: black;
+        border-style: solid;
+        background-color: #CBC5EA;
     }
 
     .container {
         display:flex;
         align-items: center;
         justify-content: space-evenly;
+        flex-wrap: wrap;
+        row-gap: 30px
+    }
+
+    #search {
+        display:flex;
+        justify-content: center;
+    }
+    .searchbar {
+        background-color: white;
+        border-color: #5c48ee;
+        border-radius: 20px;
+        padding: 10px;
+        width: 300px;
+    }
+    .searchbar::placeholder {
+        text-align:center;
     }
 </style>
 

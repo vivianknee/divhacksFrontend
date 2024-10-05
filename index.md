@@ -41,7 +41,7 @@ layout: none
 
     .heading_1{
         font-weight: 700;
-        
+        font-size: 70;
     }
 
     .heading_2{
@@ -50,7 +50,7 @@ layout: none
     }
 
     .content_container p{
-        font-size: 1rem;
+        font-size: 1.5rem;
         color: var(--text-color);
         margin-bottom: 2rem;
     }
