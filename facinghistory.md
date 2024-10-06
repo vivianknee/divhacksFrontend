@@ -8,12 +8,10 @@ baseurl: /facinghistory
 <html>
 <body>
     <header>
-        <h1><a href="https://www.facinghistory.org/">FACING HISOTRY AND OURSELVES</a></h1>
+        <a href="https://www.facinghistory.org/"><img src="images/facingHistory.svg" alt="Facing History Logo"></a>
+        <h1><a href="https://www.facinghistory.org/">FACING HISTORY AND OURSELVES</a></h1>
     </header>
-    <p><a href="https://www.facinghistory.org/"><img src="smiley.gif" alt="FacingHistory" style="width:42px;height:42px;"></a></p>
-    <section class="highlighted-section">
-    <h2>Facing History & Ourselves uses lessons of history to challenge teachers and their students to stand up to bigotry and hate.</h2>
-    </section>
+    <h2 style="text-align: center;">Facing History & Ourselves uses lessons of history to challenge teachers and their students to stand up to bigotry and hate.</h2>
     <section id="about">
         <h2>About</h2>
         <p>Facing History & Ourselves is proud to partner with organizations across sectors to accomplish our work, scale our impact worldwide, and develop programs for the diverse school communities we serve. Facing History’s programs guide our innovation and scholarship and our valued partners help us to scale our impact worldwide.</p>
@@ -32,9 +30,9 @@ baseurl: /facinghistory
         <p>Our civic education approach develops the civic knowledge, skills, and dispositions necessary for students to become engaged and ethical participants in democracy.</p>
     </section>
         <section id="events">
-        <h2>Upcoming events</h2>
-        <p>Check out <a href="https://www.facinghistory.org/learning-events">learning events</a> for more information!</p>
-    </section>
+            <h2>Upcoming events</h2>
+            <p>Check out <a href="https://www.facinghistory.org/learning-events">learning events</a> for more information!</p>
+        </section>
      <div class="flex-container">
         <div class="flex-item">
             <h2>Teaching the Election: A Workshop for New England Educators</h2>
@@ -55,8 +53,7 @@ baseurl: /facinghistory
             <p>During this course, you will learn to teach about the Reconstruction era to help students connect this history to the choices they make today.</p>
         </div>
     </div>
-    </section>
-        <section id="contact">
+    <section>
         <h2>Contact information</h2>
         <p>Headquarters: 89 South Street, Suite 401, Boston, MA 02111 <br>
         Phone: +1-617-232-1595 | Toll-free: +1-800-856-9039 <br>
@@ -70,19 +67,20 @@ baseurl: /facinghistory
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&display=swap');<style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;500;600;700&display=swap');
-    
     body {
         font-family: Poppins, sans-serif;
         margin: 0;
         padding: 0;
-        background: ##ffffff;
+        background: #ffffff;
     }
     header {
-        background-color: #5c48ee;
-        color: white;
+        background-color: white;
         text-align: center;
         padding: 10px 0;
         font-size: 1.5em;
+    }
+    h1 {
+        color: #5c48ee;
     }
     h2{
         font-size:1.75em;
@@ -151,7 +149,22 @@ baseurl: /facinghistory
         color: #333;
     }
     header a:link, header a:visited, header a:hover, header a:active {
-        color: white; /* Keeps the text white */
+        color: #5c48ee; /* Keeps the text white */
         text-decoration: none; /* No underline */
+    }
+    .image_container {
+        position: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        place-content: center;
+    }
+    .image_container img {
+        width: 170%;
+        max-width: 1000px;
+        margin: auto;
+        margin-top: 75px;
+        margin-left: 50px;
+        border-radius: 10px;
     }
 </style>
