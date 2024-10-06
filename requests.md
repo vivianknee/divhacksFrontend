@@ -1,55 +1,182 @@
 ---
 layout: none
+baseurl: /requests
 ---
 {%- include navbar.html -%}
 
+
 <html>
-    <form id="form">
-    Organization Name: <input id="orgname" type="text">
-    <br>
-    Type: <input id="type" type="text">
-    <br>
-    Tags: <input id="tags" type="text">
-    <br>
-    Description: <input id="description" type="text">
-    <br>
-    Twitter Followers: <input id="twitterfollowers" type="text">
-    <br>
-    Facebook Followers: <input id="facebookfollowers" type="text">
-    <br>
-    Funding (2015): <input id="funding2015" type="text">
-    <br>
-    Funding (2016): <input id="funding2016" type="text">
-    <br>
-    Funding (2017): <input id="funding2017" type="text">
-    <br>
-    Three Year Funding:  <input id="threeyearfunding" type="text">
-    <br>
-    Social Reach: <input id="socialreach" type="text">
-    <br>
-    Impact: <input id="impact" type="text">
-    <br>
-    Scale: <input id="scale" type="text">
-    <br>
-    URL: <input id="url" type="text">
-    <br>
-    Image URL: <input id="image" type="text">
-    <br>
-    Interdependence: <input id="interdependence" type="text">
-    <br>
-    Polarization: <input id="polarization" type="text">
-    <br>
-    Holistic: <input id="holistic" type="text">
-    <br>
-    Cultural Isolation: <input id="culturalisolation" type="text">
-    <br>
-    Mindset: <input id="mindset" type="text">
-    <br>
-    Behavior: <input id="behavior" type="text">
-    <br>
-    <input id="submit" type="submit">
-    </form>
+    <header>
+    <h1>Organization Request Form</h1>
+    </header>
+    <div class="container">
+        <form id="form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="orgname">Organization Name:</label>
+                    <input id="orgname" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type:</label>
+                    <input id="type" type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tags">Tags:</label>
+                <input id="tags" type="text">
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="twitterfollowers">Twitter Followers:</label>
+                    <input id="twitterfollowers" type="number">
+                </div>
+                <div class="form-group">
+                    <label for="facebookfollowers">Facebook Followers:</label>
+                    <input id="facebookfollowers" type="number">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Funding:</label>
+                <div class="form-row">
+                    <input id="funding2015" type="number" placeholder="2015">
+                    <input id="funding2016" type="number" placeholder="2016">
+                    <input id="funding2017" type="number" placeholder="2017">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="threeyearfunding">Three Year Funding:</label>
+                    <input id="threeyearfunding" type="number">
+                </div>
+                <div class="form-group">
+                    <label for="socialreach">Social Reach:</label>
+                    <input id="socialreach" type="number">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="impact">Impact:</label>
+                    <input id="impact" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="scale">Scale:</label>
+                    <input id="scale" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="url">URL:</label>
+                <input id="url" type="url">
+            </div>
+            <div class="form-group">
+                <label for="image">Image URL:</label>
+                <input id="image" type="url">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="interdependence">Interdependence:</label>
+                    <input id="interdependence" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="polarization">Polarization:</label>
+                    <input id="polarization" type="text">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="holistic">Holistic:</label>
+                    <input id="holistic" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="culturalisolation">Cultural Isolation:</label>
+                    <input id="culturalisolation" type="text">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="mindset">Mindset:</label>
+                    <input id="mindset" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="behavior">Behavior:</label>
+                    <input id="behavior" type="text">
+                </div>
+            </div>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </div>
 </html>
+
+<style>
+    header {
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1.5em;
+        color: #5c48ee;
+    }
+    body{
+        font-family: Poppins, sans-serif;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+        color: #333;
+    }
+    .container{
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #CBC5EA;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-group{
+        display: grid;
+        gap: 10px;
+    }
+    .form-row{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 20px;
+    }
+    label{
+        font-weight: bold;
+    }
+    input, textarea{
+        wideth: 100%;
+        padding 10px;
+        border: 1px solid var(#ddd);
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    textarea{
+        height: 100px;
+        resize: vertical;
+    }
+    input[type="submit"]{
+        background-color: #5c48ee;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+    }
+    input[type="submit"]: hover{
+        background-color: #CBC5EA;
+    }
+    @media(max-width: 600px){
+        input[type="submit"] {
+            width: 100%;
+        }
+    }
+</style>
+
 
 <script>
     let form = document.querySelector("#form");

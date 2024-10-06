@@ -1,6 +1,6 @@
 ---
 layout: none
-baseurl: /facinghistory
+baseurl: /facingHistory
 ---
 
 {%- include navbar.html -%}

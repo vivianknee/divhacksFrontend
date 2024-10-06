@@ -36,7 +36,10 @@ layout: none
     </div>
     <br><br>
     <button id="ai" onclick="pythonAI()">Generate</button>
-    <br><br>
+    <br>
+    <div id="generated">
+        <h3>Recommendations: </h3>
+    </div>
 </body>
 </html>
 
@@ -45,6 +48,11 @@ layout: none
         display: flex;
         font-size: 16px;
         justify-content: center;
+    }
+    #generated {
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
     }
     #ai {
         padding: 10px 15px;
@@ -303,8 +311,25 @@ layout: none
         });
     }
     function pythonAI() {
-        // execute python script with aiArray
-    }
+    fetch('http://10.207.73.150:8080/api/python/run-python', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(aiArray), // Convert aiArray to JSON string
+    })
+    .then(response => response.text())
+    .then(data => {
+        let generated = document.querySelector("#generated");
+        let actual = JSON.parse(data.replace(/'/g, '"'));
+        for(val of actual) {
+            let para = document.createElement("p");
+            para.innerText = val;
+            generated.appendChild(para);
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
 
     const btnSearch = document.getElementById("search_button");
     const resultContainer = document.getElementById("result");
