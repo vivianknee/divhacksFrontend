@@ -234,6 +234,7 @@ layout: none
             console.log("data set to all_groups");
              
             for(let i = 1; i < dataArray.length; i++) {
+                let label = dataArray[i]["label"];
                 let container = document.querySelector(".container");
                 let card = document.createElement("div");
                 card.classList.add("square");
