@@ -80,10 +80,14 @@ layout: none
         padding:5px;
         display: flex;
         justify-content: center;
-        align-items: center;
         border-color: black;
         border-style: solid;
         background-color: #CBC5EA;
+        font-size: 20px;
+        text-align: center;
+        vertical-align: middle;
+        padding: 34px 10px 10px 10px;
+        flex-direction: column
     }
 
     .container {
@@ -91,7 +95,9 @@ layout: none
         align-items: center;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        row-gap: 30px;
+        row-gap: 35px;  
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     #search {
@@ -164,6 +170,28 @@ layout: none
         align-items: center;
     }
 
+    .org_button {
+        display: block; 
+        width: 65%; 
+        height: 15%;
+        background-color: #6a5acd;  
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        text-align: center;  
+        cursor: pointer;
+        vertical-align: middle;
+        margin-left: 50px;
+        margin-top: 15px;
+        transition: background-color 0.3s ease, transform 0.2s ease;  
+    }
+
+    .org_button:hover {
+        background-color: #5c48ee;  
+        transform: scale(1.05);  
+    }
+
 </style>
 
 <script>
@@ -192,6 +220,7 @@ layout: none
         return rows.map(row => row.split(','));
     }
 
+    // Fetch the CSV file
     fetch("http://10.207.73.150:8080/api/divhacks/get")
         .then(response => {
             if (!response.ok) {
@@ -199,15 +228,33 @@ layout: none
             }
             return response.json();
         })
-        .then(dataArray => {
+        .then(data => {
+            dataArray = data;
             console.log(dataArray);
+            console.log("data set to all_groups");
+             
             for(let i = 1; i < dataArray.length; i++) {
                 let label = dataArray[i]["label"];
                 let container = document.querySelector(".container");
-                let child = document.createElement("div");
-                child.classList.add("square");
-                child.textContent = label;
-                container.appendChild(child);
+                let card = document.createElement("div");
+                card.classList.add("square");
+
+                // Create and append a paragraph for text content
+                let textNode = document.createElement("p");
+                textNode.textContent = dataArray[i]["label"];
+                card.appendChild(textNode); // Append the text node first
+
+                // Create and configure the button
+                let b = document.createElement("button");
+                b.textContent = 'Website';
+                b.classList.add("org_button"); // Ensure the class is added to style the button
+                let url = dataArray[i][21];
+                b.addEventListener('click', function() {
+                    window.location.href = url; // Add click event to navigate
+                });
+
+                card.appendChild(b); // Then append the button
+                container.appendChild(card); // Append the card to the container
             }
         })
         .catch(error => {
@@ -258,10 +305,25 @@ layout: none
             console.log(group);
 
             let container = document.querySelector(".container");
-            let child = document.createElement("div");
-            child.classList.add("square");
-            child.textContent = group[0];
-            container.appendChild(child);
+            let card = document.createElement("div");
+            card.classList.add("square");
+
+            // Create and append a paragraph for text content
+            let textNode = document.createElement("p");
+            textNode.textContent = group["label"];
+            card.appendChild(textNode); // Append the text node first
+
+            // Create and configure the button
+            let b = document.createElement("button");
+            b.textContent = 'Website';
+            b.classList.add("org_button"); // Ensure the class is added to style the button
+            let url = group["url"];
+            b.addEventListener('click', function() {
+                window.location.href = url; // Add click event to navigate
+            });
+            card.appendChild(b); // Then append the button
+
+            container.appendChild(card);
           }
 
     });
@@ -271,9 +333,9 @@ layout: none
         console.log(types);
         for (const group of dataArray){
               console.log(group);
-              console.log("group type is: " + group[1])
+              console.log("group type is: " + group["typeoforg"])
             for (type of types){
-                if (group[1] === type)
+                if (group["typeoforg"] === type)
                     {
                     result.push(group);
                 }
