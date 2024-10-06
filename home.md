@@ -30,6 +30,14 @@ layout: none
             <input class="box_pos" type="checkbox" id="antiHate" name="antiHate" value="Anti-Hate">
             <label for="antiHate">Anti-Hate</label>
         </div>
+        <div class="filter-item">
+            <input class="box_pos" type="checkbox" id="research" name="research" value="Research">
+            <label for="research">Research</label>
+        </div>
+        <div class="filter-item">
+            <input class="box_pos" type="checkbox" id="media" name="media" value="Media">
+            <label for="media">Media</label>
+        </div>
     </div>
     <br><br>
     <div id="result" class="container objects">
@@ -265,6 +273,8 @@ layout: none
     const resultContainer = document.getElementById("result");
     const comm_filter = document.getElementById("community");
     const antiHate_filter = document.getElementById("antiHate");
+    const research_filter = document.getElementById("research");
+    const media_filter = document.getElementById("media"); 
 
     btnSearch.addEventListener('click', (event) => {
           console.log("Search Clicked!");
@@ -273,6 +283,8 @@ layout: none
 
           var community_value = comm_filter.value;
           var antiHate_value = antiHate_filter.value; 
+          var research_value = research_filter.value;
+          var media_value = media_filter.value;  
           
           if (document.getElementById('community').checked) {
             console.log("community is checked");
@@ -287,7 +299,21 @@ layout: none
           } else {
             console.log("didn't check antiHate");
           }
-          
+
+          if (document.getElementById('research').checked) {
+            console.log("research is checked");
+            values.push(research_value);
+          } else {
+            console.log("didn't check research");
+          }
+
+          if (document.getElementById('media').checked) {
+            console.log("media is checked");
+            values.push(media_value);
+          } else {
+            console.log("didn't check media");
+          }
+
           console.log(values);
           var group_list = getFilterResults(values); 
 
