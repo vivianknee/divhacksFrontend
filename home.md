@@ -192,8 +192,7 @@ layout: none
         return rows.map(row => row.split(','));
     }
 
-    // Fetch the CSV file
-    fetch("http://localhost:8080/api/divhacks/get")
+    fetch("http://10.207.73.150:8080/api/divhacks/get")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
